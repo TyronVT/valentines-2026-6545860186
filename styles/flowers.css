@@ -1344,7 +1344,7 @@
 }
 .m-photo {
     position: absolute;
-    top: 25vh;
+    top: 20vh;
     left: 50%;
     transform: translateX(-50%);
     z-index: 200;

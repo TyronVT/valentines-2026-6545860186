@@ -289,12 +289,12 @@ export default function Home() {
                   Will you be my Valentine?
                 </span>
 
-                <button
+                {/*<button
                   className="accept-btn"
                   onClick={() => setAccepted(true)}
                 >
                   Accept 💖
-                </button>
+                </button>*/}
                 {accepted && (
                   <div className="date-card">
                     <span className="valentine-sign__text">
