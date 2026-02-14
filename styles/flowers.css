@@ -1347,8 +1347,6 @@
     top: 25vh;
     left: 50%;
     transform: translateX(-50%);
-    width: 50vw;
-    height: 55vw;
     z-index: 200;
     bottom: auto;
     opacity: 0;
@@ -1396,9 +1394,9 @@
     bottom: 24vmin;
     left: 50%;
     transform: translateX(-50%);
-    width: 32vmin;
-    height: 38vmin;
-    z-index: 5;
+    width: 70vmin;
+    height: 80vmin;
+    z-index: 0;
     border: 0.8vmin solid rgba(255, 255, 255, 0.7);
     box-shadow:
         0 0 20px rgba(255, 107, 157, 0.25),
