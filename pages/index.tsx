@@ -345,33 +345,6 @@ export default function Home() {
               <span className="valentine-sign__text">
                 Will you be my Valentine?
               </span>
-
-              <button className="accept-btn" onClick={() => setAccepted(true)}>
-                Accept 💖
-              </button>
-              {accepted && (
-                <div className="date-card">
-                  <h2>Our Valentine's Date</h2>
-                  <p>
-                    <strong>Time:</strong> 11AM
-                  </p>
-                  <p>
-                    <strong>Where:</strong> MOA
-                  </p>
-                  <p>
-                    <strong>What to do:</strong>
-                  </p>
-                  <ul>
-                    <li>Bowling 🎳</li>
-                    <li>Eat 🍽️</li>
-                    <li>Karaoke 🎤</li>
-                    <li>Adidas window shopping 👟</li>
-                    <li>Ferris Wheel 🎡</li>
-                    <li>Street Food Foodtrip 🌮</li>
-                  </ul>
-                  <p className="love-text">See you! I love you! ❤️</p>
-                </div>
-              )}
             </div>
           </div>
         )}
