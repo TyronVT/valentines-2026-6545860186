@@ -1,42 +1,170 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+    overflow-x: hidden; /* prevent horizontal overflow */
+}
+
+:root {
+    --dark-color: #0a0008;
+}
+
+html,
+body {
+    max-width: 100vw;
+    min-height: 100vh;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--dark-color);
+    overflow: hidden;
+    perspective: 1000px;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.valentine-sign__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* ACCEPT BUTTON */
+.accept-btn {
+    margin-top: 15px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff4e9b, #ff85c1);
+    font-family: "Dancing Script", cursive;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.accept-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px rgba(255, 105, 180, 0.9);
+}
+
+.date-card h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ff85c1;
+}
+
+.date-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.date-card li {
+    margin: 6px 0;
+}
+
+.love-text {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #ff85c1;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===== DATE CARD TEXT STYLING ===== */
+
+.date-card {
+    margin-top: 30px;
+    padding: 28px;
+    width: 90%;
+    max-width: 360px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    color: #fff;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.25);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+p {
+    font-family: "Dancing Script", cursive;
+}
+ul {
+    font-family: "Dancing Script", cursive;
+}
+
+/* Title */
+.date-card .valentine-sign__text {
+    display: block;
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+    color: #ff8ec7;
+    text-shadow: 0 0 12px rgba(255, 105, 180, 0.6);
+}
+
+/* Regular text */
+.date-card p {
+    font-size: 16px;
+    margin: 6px 0;
+    letter-spacing: 0.5px;
+    color: #ffe6f2;
+}
+
+/* Highlight strong labels */
+.date-card strong {
+    color: #ff8ec7;
+    font-weight: 600;
+}
+
+/* Activity list */
+.date-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+}
+
+.date-card li {
+    margin: 6px 0;
+    font-size: 15px;
+    color: #fff;
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+/* Cute hover effect */
+.date-card li:hover {
+    transform: scale(1.05);
+    color: #ffb3da;
+}
+
+/* Love closing text */
+.date-card .love-text {
+    display: block;
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ff8ec7;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
 }
